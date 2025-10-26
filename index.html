@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced English Idioms (23 Concepts)</title>
+    <!-- Tailwind CSS for modern, responsive, and professional styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .card-container {
+            /* Smooth transition for filtering */
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        .card-back {
+            /* Smooth transition for flip content */
+            transition: all 0.3s ease-in-out;
+        }
+        .nav-button {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-button.active-nav {
+            background-color: #4f46e5; /* indigo-600 */
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        /* Custom Table Styling for Clarity */
+        .card-back table th {
+            border-bottom: 2px solid #e5e7eb;
+        }
+        .card-back table td {
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center py-4">
+                <h1 class="text-3xl font-extrabold text-indigo-700">Vocabulary Builder: 23 Idioms & Phrases</h1>
+                <nav class="mt-4 sm:mt-0 flex flex-wrap justify-center gap-2">
+                    <button class="nav-button active-nav px-4 py-2 rounded-full text-sm font-medium text-gray-700 bg-gray-200 hover:bg-indigo-500 hover:text-white" data-filter="all" onclick="filterCards('all', this)">
+                        All (23)
+                    </button>
+                    <button class="nav-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 bg-gray-200 hover:bg-orange-500 hover:text-white" data-filter="memory" onclick="filterCards('memory', this)">
+                        Memory & Communication (6)
+                    </button>
+                    <button class="nav-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 bg-gray-200 hover:bg-blue-500 hover:text-white" data-filter="work" onclick="filterCards('work', this)">
+                        Work & Challenge (7)
+                    </button>
+                    <button class="nav-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 bg-gray-200 hover:bg-purple-500 hover:text-white" data-filter="social" onclick="filterCards('social', this)">
+                        Social & Character (5)
+                    </button>
+                    <button class="nav-button px-4 py-2 rounded-full text-sm font-medium text-gray-700 bg-gray-200 hover:bg-green-500 hover:text-white" data-filter="state" onclick="filterCards('state', this)">
+                        State & Place (5)
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Introductory Panel -->
+        <div class="mb-8 p-6 bg-white rounded-xl shadow-lg border-l-4 border-indigo-500">
+            <p class="text-xl font-medium text-gray-700">Explore 23 new English idioms and phrases. Click a card to flip it and use the filters above to focus on specific categories.</p>
+        </div>
+
+        <!-- Card Grid -->
+        <div id="card-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Category: Memory & Communication (Orange) -->
+
+            <!-- Card #1: TAKE/STROLL DOWN MEMORY LANE -->
+            <div class="card-container" data-category="memory">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-orange-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#1 TAKE/STROLL DOWN MEMORY LANE</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-orange-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">To deliberately recall pleasant or sentimental memories.</td><td class="py-3 pl-2 italic">We were just <strong>taking a stroll down memory lane</strong> and recalling the days of our youth.</td></tr>
+                                <tr><td class="py-3 pr-2">To reminisce about the past.</td><td class="py-3 pl-2 italic">Let's go there and <strong>take a trip down memory lane</strong>.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #2: COMMIT SOMETHING TO MEMORY -->
+            <div class="card-container" data-category="memory">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-orange-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#2 COMMIT SOMETHING TO MEMORY</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-orange-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">To study something carefully so that you can remember it exactly.</td><td class="py-3 pl-2 italic">She decided to <strong>commit the entire acceptance speech to memory</strong>.</td></tr>
+                                <tr><td class="py-3 pr-2">To memorize perfectly.</td><td class="py-3 pl-2 italic">If you want to pass the test, you must <strong>commit all of the equations to memory</strong>.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #3: IF MY MEMORY SERVES ME CORRECTLY -->
+            <div class="card-container" data-category="memory">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-orange-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#3 IF MY MEMORY SERVES ME CORRECTLY</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-orange-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">If I remember correctly (used to introduce a potential recollection).</td><td class="py-3 pl-2 italic">I think he was called Sam, <strong>if my memory serves me correctly</strong>.</td></tr>
+                                <tr><td class="py-3 pr-2">A cautious way to confirm information.</td><td class="py-3 pl-2 italic"><strong>If my memory serves me correctly</strong>, we went to the same high school.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #4: CAN’T GET A WORD IN EDGEWISE -->
+            <div class="card-container" data-category="memory">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-orange-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#4 CAN’T GET A WORD IN EDGEWISE</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-orange-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">You can't say anything because someone else is talking so much.</td><td class="py-3 pl-2 italic">Sally got so excited when she was talking that nobody else could <strong>get a word in edgewise</strong>.</td></tr>
+                                <tr><td class="py-3 pr-2">Unable to interject into a conversation.</td><td class="py-3 pl-2 italic">He was talking so much, so I couldn’t <strong>get a word in edgewise</strong>.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #5: LOSE MY TRAIN OF THOUGHT -->
+            <div class="card-container" data-category="memory">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-orange-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#5 LOSE MY TRAIN OF THOUGHT</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-orange-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">To forget what one was talking or thinking about.</td><td class="py-3 pl-2 italic">I’m sorry, I <strong>lost my train of thought</strong>. What were we talking about again?</td></tr>
+                                <tr><td class="py-3 pr-2">To be momentarily distracted and forget an idea.</td><td class="py-3 pl-2 italic">The question made the speaker <strong>lose his train of thought</strong>.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #6: LIKE A BROKEN RECORD -->
+            <div class="card-container" data-category="memory">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-orange-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#6 LIKE A BROKEN RECORD</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-orange-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">Someone or something that annoyingly repeats itself.</td><td class="py-3 pl-2 italic">He was starting to sound <strong>like a broken record</strong>, repeating the same advice.</td></tr>
+                                <tr><td class="py-3 pr-2">Repetitive and irritating.</td><td class="py-3 pl-2 italic">She’s always complaining about how he treats her. She sounds <strong>like a broken record</strong>.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: Work & Challenge (Blue) -->
+
+            <!-- Card #7: CRANK OUT SOMETHING -->
+            <div class="card-container" data-category="work">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-blue-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#7 CRANK OUT SOMETHING</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-blue-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">To produce something continually, quickly, or mechanically.</td><td class="py-3 pl-2 italic">Stanley can <strong>crank out a lot of essays</strong> in a single day.</td></tr>
+                                <tr><td class="py-3 pr-2">To manufacture or create volume quickly.</td><td class="py-3 pl-2 italic">The new robot they created can <strong>crank out over 100 mechanical parts</strong> in one hour.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #8: DRIVE A HARD BARGAIN -->
+            <div class="card-container" data-category="work">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-blue-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#8 DRIVE A HARD BARGAIN</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-blue-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">Be uncompromising in making a deal; negotiate prices in one's favor.</td><td class="py-3 pl-2 italic">I had to <strong>drive a hard bargain</strong> with the Korean man at the store.</td></tr>
+                                <tr><td class="py-3 pr-2">To negotiate skillfully for one's benefit.</td><td class="py-3 pl-2 italic">You <strong>drive a hard bargain</strong>, but I’ll sign the contract.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #9: HAVE THE UPPER HAND -->
+            <div class="card-container" data-category="work">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-blue-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#9 HAVE THE UPPER HAND</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-blue-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">Have or gain an advantage or control over someone or something.</td><td class="py-3 pl-2 italic">We are still waiting to see which party will <strong>have the upper hand</strong> in the election.</td></tr>
+                                <tr><td class="py-3 pr-2">To possess a position of power or control.</td><td class="py-3 pl-2 italic">By half time, the Mexican soccer team seemed to <strong>have the upper hand</strong>.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #10: HIT A SNAG -->
+            <div class="card-container" data-category="work">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-blue-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#10 HIT A SNAG</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-blue-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">Encounter a problem, obstacle, or unexpected delay.</td><td class="py-3 pl-2 italic">We’ve <strong>hit a snag</strong> with this design project.</td></tr>
+                                <tr><td class="py-3 pr-2">To run into a difficulty.</td><td class="py-3 pl-2 italic">Our project <strong>hit a snag</strong>, so we had to cancel everything and start over.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #11: ROLL UP ONE’S SLEEVES -->
+            <div class="card-container" data-category="work">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-blue-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#11 ROLL UP ONE’S SLEEVES</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-blue-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">To prepare to fight or work hard.</td><td class="py-3 pl-2 italic">I <strong>rolled up my sleeves</strong> and exercised every day to meet my goal.</td></tr>
+                                <tr><td class="py-3 pr-2">To get ready for serious work.</td><td class="py-3 pl-2 italic">If you <strong>roll up your sleeves</strong> and work hard, you will succeed one day.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #12: OUT OF THE WOODS -->
+            <div class="card-container" data-category="work">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-blue-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#12 OUT OF THE WOODS</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-blue-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">Out of danger or difficulty; past a critical phase.</td><td class="py-3 pl-2 italic">When the patient got <strong>out of the woods</strong>, his parents relaxed.</td></tr>
+                                <tr><td class="py-3 pr-2">No longer facing the main challenge.</td><td class="py-3 pl-2 italic">The doctor said you would be <strong>out of the woods</strong> in a week.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #13: ON A SHOESTRING BUDGET -->
+            <div class="card-container" data-category="work">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-blue-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#13 ON A SHOESTRING BUDGET</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-blue-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">Having very little money to spend.</td><td class="py-3 pl-2 italic">The movie was produced <strong>on a shoestring budget</strong>.</td></tr>
+                                <tr><td class="py-3 pr-2">With minimal financial resources.</td><td class="py-3 pl-2 italic">We are working <strong>on a shoestring budget</strong>, so we have to spend money wisely.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Category: Social & Character (Purple) -->
+
+            <!-- Card #14: BLOW YOUR OWN HORN/TRUMPET -->
+            <div class="card-container" data-category="social">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-purple-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#14 BLOW YOUR OWN HORN/TRUMPET</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-purple-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">To tell everyone proudly about your achievements (often used negatively).</td><td class="py-3 pl-2 italic">Stop <strong>blowing your own horn</strong>. It’s annoying.</td></tr>
+                                <tr><td class="py-3 pr-2">To boast or self-promote.</td><td class="py-3 pl-2 italic">I am usually quite humble, but I felt like <strong>blowing my own horn</strong> today.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #15: BITE THE HAND THAT FEEDS ONE -->
+            <div class="card-container" data-category="social">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-purple-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#15 BITE THE HAND THAT FEEDS ONE</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-purple-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">Deliberately hurt or offend a benefactor (someone who helps you).</td><td class="py-3 pl-2 italic">How can you <strong>bite the hand that feeds you</strong>?</td></tr>
+                                <tr><td class="py-3 pr-2">To be ungrateful or destructive towards a supporter.</td><td class="py-3 pl-2 italic">He can’t expect sympathy when he <strong>bites the hand that feeds him</strong>.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #16: DOWN TO EARTH -->
+            <div class="card-container" data-category="social">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-purple-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#16 DOWN TO EARTH</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-purple-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">Straightforward, practical, and simple in style; modest.</td><td class="py-3 pl-2 italic">Ruth is a very <strong>down-to-earth</strong> woman.</td></tr>
+                                <tr><td class="py-3 pr-2">Realistic and sensible.</td><td class="py-3 pl-2 italic">I like his <strong>down-to-earth</strong> approach to fixing problems.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #17: BLOW THE WHISTLE -->
+            <div class="card-container" data-category="social">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-purple-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#17 BLOW THE WHISTLE</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-purple-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">To report someone’s wrongdoing, illegal activity, or dangerous conditions.</td><td class="py-3 pl-2 italic">The bank manager <strong>blew the whistle</strong> on the employee's illegal activity.</td></tr>
+                                <tr><td class="py-3 pr-2">To expose a secret.</td><td class="py-3 pl-2 italic">He was fired for <strong>blowing the whistle</strong> on the company’s mismanagement of accounts.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #18: TAKE YOUR HAT OFF TO SOMETHING/SOMEONE -->
+            <div class="card-container" data-category="social">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-purple-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#18 TAKE YOUR HAT OFF TO (SOMEONE)</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-purple-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">It means you admire or respect them, or something they have done.</td><td class="py-3 pl-2 italic">I <strong>took my hat off to him</strong> for the excellent work he had done.</td></tr>
+                                <tr><td class="py-3 pr-2">To show great respect.</td><td class="py-3 pl-2 italic">We have our <strong>hats off to him</strong> for all that he has accomplished.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category: State & Place (Green) -->
+
+            <!-- Card #19: HOT SPOT -->
+            <div class="card-container" data-category="state">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-green-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#19 HOT SPOT</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-green-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">A very popular or active place (literal or metaphorical).</td><td class="py-3 pl-2 italic">This restaurant is the <strong>hot spot</strong>. Everyone is here.</td></tr>
+                                <tr><td class="py-3 pr-2">A physical location for internet access (Wi-Fi).</td><td class="py-3 pl-2 italic">Do you know if there is a <strong>hotspot</strong> here? I need to email someone.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #20: BOOKED SOLID -->
+            <div class="card-container" data-category="state">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-green-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#20 BOOKED SOLID</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-green-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">To be completely full (in terms of reservations or appointments).</td><td class="py-3 pl-2 italic">The restaurant was <strong>booked solid</strong>.</td></tr>
+                                <tr><td class="py-3 pr-2">To have no more available time for new clients or guests.</td><td class="py-3 pl-2 italic">I went to the hair salon, but the hairdresser said that she was <strong>booked solid</strong>.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #21: GET SOME R&R -->
+            <div class="card-container" data-category="state">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-green-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#21 GET SOME R&R</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-green-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">Rest and Relaxation (abbreviation).</td><td class="py-3 pl-2 italic">I’m really stressed out. I need some <strong>R&R</strong>.</td></tr>
+                                <tr><td class="py-3 pr-2">Time spent on rest and leisure.</td><td class="py-3 pl-2 italic">Last weekend I enjoyed some much needed <strong>R&R</strong>.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #22: ACQUIRE A TASTE FOR (SOMETHING) -->
+            <div class="card-container" data-category="state">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-green-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#22 ACQUIRE A TASTE FOR (SOMETHING)</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-green-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">To develop a desire or preference for a particular food, drink, or experience.</td><td class="py-3 pl-2 italic">He <strong>acquired a taste for salad</strong> after years of his mom giving it to him.</td></tr>
+                                <tr><td class="py-3 pr-2">To start liking something new.</td><td class="py-3 pl-2 italic">They <strong>acquired a taste for Mediterranean food</strong> after living overseas.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card #23: BITTER PILL TO SWALLOW -->
+            <div class="card-container" data-category="state">
+                <div class="card bg-white rounded-xl shadow-xl overflow-hidden cursor-pointer h-full flex flex-col hover:shadow-2xl transition duration-300" onclick="toggleCard(this)">
+                    <div class="card-front p-6 bg-green-600 text-white flex-grow">
+                        <h3 class="text-3xl font-extrabold">#23 BITTER PILL TO SWALLOW</h3>
+                    </div>
+                    <div class="card-back p-6 hidden border-t-4 border-green-300">
+                        <table class="w-full text-left table-auto">
+                            <thead><tr><th class="py-2 text-gray-700 font-semibold">Meaning</th><th class="py-2 text-gray-700 font-semibold">Example</th></tr></thead>
+                            <tbody class="text-gray-600">
+                                <tr class="border-b border-gray-100"><td class="py-3 pr-2">Something that is very unpleasant but must be accepted.</td><td class="py-3 pl-2 italic">Losing to my younger sister was a <strong>bitter pill to swallow</strong>.</td></tr>
+                                <tr><td class="py-3 pr-2">An unpleasant fact or disappointment that is difficult to endure.</td><td class="py-3 pl-2 italic">Not passing the exam was a <strong>bitter pill to swallow</strong>.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- /#card-grid -->
+
+        <!-- Conclusion Footer -->
+        <div class="mt-12 bg-white rounded-xl shadow-xl p-8 text-center border-t-4 border-indigo-500">
+            <h2 class="text-4xl font-extrabold text-indigo-700 mb-2">Lesson Updated and Ready!</h2>
+            <p class="text-xl text-gray-600">All 23 new concepts are here. Try using the filters to practice specific categories like **Work & Challenge** or **Memory & Communication**.</p>
+        </div>
+
+    </main>
+
+    <script>
+        /**
+         * Toggles the visibility of the "back" of a flashcard.
+         * @param {HTMLElement} cardElement - The .card element that was clicked.
+         */
+        function toggleCard(cardElement) {
+            const cardBack = cardElement.querySelector('.card-back');
+            if (cardBack) {
+                cardBack.classList.toggle('hidden');
+            }
+        }
+
+        /**
+         * Filters the cards displayed on the page based on category.
+         * @param {string} filter - The category to show ('all', 'memory', 'work', 'social', 'state').
+         * @param {HTMLElement} buttonElement - The nav button that was clicked.
+         */
+        function filterCards(filter, buttonElement) {
+            // 1. Update active state on navigation buttons
+            document.querySelectorAll('.nav-button').forEach(button => {
+                button.classList.remove('active-nav');
+            });
+            buttonElement.classList.add('active-nav');
+
+            // 2. Filter the cards
+            const cardGrid = document.getElementById('card-grid');
+            const cards = cardGrid.querySelectorAll('.card-container');
+
+            cards.forEach(card => {
+                const cardCategory = card.dataset.category;
+                // Hide the back when filtering to prevent visual overlap
+                const cardBack = card.querySelector('.card-back');
+                if (cardBack) {
+                    cardBack.classList.add('hidden');
+                }
+
+                if (filter === 'all' || cardCategory === filter) {
+                    card.classList.remove('hidden');
+                    card.style.transform = 'scale(1)';
+                    card.style.opacity = '1';
+                } else {
+                    // Use a slight delay and opacity transition for smoother filtering effect
+                    card.style.transform = 'scale(0.9)';
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.classList.add('hidden');
+                    }, 300); // Matches CSS transition duration
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
